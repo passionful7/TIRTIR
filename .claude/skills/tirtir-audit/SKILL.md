@@ -192,12 +192,19 @@ Task 성격 → owner 매칭:
 - **증상**: "기준", "변경", "앞으로", "이후부터", "통일" 언급된 규칙 변경이 CLAUDE.md 미반영
 - **방지**: 키워드 발견 즉시 **CLAUDE.md에 반영**. Task가 아닌 문서 업데이트.
 
-### RC9 — Row 번호 mismatch
-- **증상**: batchUpdate가 row N+1에 기록 (배열 index ≠ sheet row)
-- **방지**: 
-  - Header row 오프셋 주의 (`values[i]` = sheet row `i+1`)
-  - batchUpdate 후 **반드시 2~3 row read-back 검증**
-  - `'업무'!A{N}:G{N}` 명시적 range 사용
+### RC9 — Row 번호 mismatch (CRITICAL — 4/13 + 4/21 재발)
+- **증상**: batchUpdate가 엉뚱한 row에 기록. list index `i`를 sheet row로 그대로 사용 → `values[0]`=header=row 1이므로 실제 대상은 row `i+1`인데 row `i`에 기록 (off-by-one). 4/13 audit 발생 후 4/21 audit에서 동일 패턴 재발.
+- **방지 (강화 — 매 audit 강제 적용)**:
+  1. **Parse 직후 sheet_row 주입 필수**:
+     ```python
+     rows = [{'sheet_row': idx + 1, 'data': v} for idx, v in enumerate(values)]
+     # rows[0]['sheet_row'] == 1 (header), rows[135]['sheet_row'] == 136
+     ```
+  2. **list index `i`를 range에 직접 사용 금지**. range는 오직 `rows[idx]['sheet_row']`에서만 생성 — `f"업무!A{i}:G{i}"` 패턴 사용 금지.
+  3. **batchUpdate payload 생성 후 실행 전 sanity check**: 각 range의 현재 A 컬럼 값 = target task 이름인지 1~2건 무작위 검증 → 불일치 시 즉시 중단.
+  4. **batchUpdate 직후 read-back 2~3건 필수** (`'업무'!A{N}:G{N}` 명시적 range) + 수정 row의 앞뒤 1개 row 포함해서 읽어 off-by-one 감지.
+  5. **3회 이상 재발 시 helper 함수로 코드화**: `def row_to_sheet(idx): return idx + 1` — "기억"에 의존하는 prevention은 유효하지 않음.
+  6. **AUDIT_LOG 11.1 행에 반드시 기록**: off-by-one 재발 시 ❌ 표시 + 원인·복구 방법 즉시 기입.
 
 ### RC10 — Cursor 누락
 - **증상**: `slack_read_channel` 재호출 시 `next_cursor` 미전달 → 같은 첫 페이지 반환

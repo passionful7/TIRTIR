@@ -382,10 +382,21 @@ Each time a mistake is found, log it here with root cause + prevention rule. Bef
 **Root cause:** Treated convention changes as task updates instead of documentation updates.
 **Prevention:** When a Slack message uses words like "기준", "변경", "앞으로", "이후부터", "통일" — the change must be reflected in CLAUDE.md immediately, not just in a task row. Operational rules govern all future tasks; missing them creates cascading errors.
 
-### RC9: Row-number misalignment in sheet updates
-**Symptom:** batchUpdate wrote values to row N+1 instead of row N because the array index ≠ sheet row number (header row offset).
-**Root cause:** Confused 0-indexed array position with 1-indexed sheet row.
-**Prevention:** When computing target rows from a read, always add 1 for the header row. After any batchUpdate to multiple rows, read back at least 2–3 of the updated rows to verify alignment before continuing.
+### RC9: Row-number misalignment in sheet updates (CRITICAL — RECURRING)
+**Symptom (4/13 + 4/21 재발):** batchUpdate wrote values to wrong rows because the array index ≠ sheet row number (header row offset). 4/13 audit에서 발생 후 4/21 audit에서 **동일 패턴 재발** — list index `i`를 sheet row로 그대로 사용 → `values[0]`=header=row 1이므로 실제 대상은 row `i+1`인데 row `i`에 기록 (row 136, 139, 192, 194 등 off-by-one으로 엉뚱한 task의 Result를 덮어씀).
+**Root cause:** (1) 0-indexed array position과 1-indexed sheet row를 mental model에서 구분하지 않음. (2) 기존 prevention 규칙이 "add 1 for header row"만 선언하고 실제 실행 단계에서 강제하지 않음 → 매번 실수 재발 가능. (3) Parse 시점에 `sheet_row`를 명시적으로 주입하지 않고 나중에 계산하므로 실수할 여지가 남음. (4) 3회 이상 반복 시점에서 "기억"에 의존하는 prevention 자체가 RC16(checklist skipping)의 재발 유도 구조.
+**Prevention (강화 — 매 audit 강제 적용):**
+1. **Parse 직후 sheet_row 주입 필수**: `values = sheet.get('업무!A1:G250')` 수행 후 **즉시** 각 row에 `sheet_row = idx + 1` 필드 추가. 이후 모든 참조는 이 필드만 사용. 예:
+   ```python
+   rows = [{'sheet_row': idx + 1, 'data': v} for idx, v in enumerate(values)]
+   # 검증: rows[0]['sheet_row'] == 1 (header), rows[135]['sheet_row'] == 136
+   ```
+2. **list index `i`를 batchUpdate range에 직접 넣지 말 것**. range는 반드시 `rows[idx]['sheet_row']`에서만 가져옴. `f"업무!A{i}:G{i}"` 패턴 사용 금지, `f"업무!A{rows[idx]['sheet_row']}:G{rows[idx]['sheet_row']}"` 사용.
+3. **batchUpdate payload 생성 후 실행 전 sanity check**: payload의 각 range에 대해 "해당 range의 현재 A 컬럼 값 = 내가 수정하려는 task 이름"인지 1~2건 무작위 검증. 불일치 시 즉시 중단하고 index 매핑 재확인.
+4. **batchUpdate 직후 read-back 2~3건 필수**: `'업무'!A{N}:G{N}` 명시적 range로 읽어 (a) 업데이트 값이 반영되었는지 (b) 다른 task가 덮어씌워지지 않았는지 확인.
+5. **범위 확장 read-back**: 수정한 row의 앞뒤 1개 row 포함해서 read-back하여 off-by-one 감지 (예: row 137 수정 시 A136:G138 read-back).
+6. **3회 이상 재발 시 helper 함수로 코드화**: `def row_to_sheet(idx): return idx + 1` 같은 helper를 이용하여 실수 가능 지점 제거. "기억"에 의존하는 prevention은 더 이상 유효하지 않음.
+7. **AUDIT_LOG 11.1 행에 반드시 기록**: off-by-one 재발 시 ❌로 표시하고 원인·복구 방법 즉시 기입.
 
 ### RC10: Incorrect Slack channel cursor usage
 **Symptom:** Re-ran `slack_read_channel` without `cursor` and got the same first page again.
