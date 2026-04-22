@@ -72,6 +72,14 @@
 - **RC 위반: 1건**
   - RC9 부분 위반: R174/R175 batchUpdate range D:F에서 values 3개 입력 시 E(Status) 컬럼에 owner 이름 덮어쓰기 → 즉시 감지 + E 컬럼만 "Not yet" 복구. 실제 Due/Result 값은 정상. 사용자 지적 전 자체 감지 → 복구. 패턴: `D:F` range 배열 길이 3 시 E 컬럼이 중간 값을 받음. Prevention: range/values 매칭 시 intent 명확히 (E를 건드리지 않으려면 D 단건 + F 단건으로 분리)
 - 발송 ts: 1776818707.055399 (C0ALWLLQFU7 내부 채널, 확인 없이 자동 발송)
+- **RC 위반 추가 (사용자 지적으로 발견 — CRITICAL REPEAT)**: RC12 재발
+  - 증상: 4/21 EOD 봇 thread(`ts 1776733061.250129`)에 4/21 16:16~16:22 팀 reply 6개가 있었으나 누락
+    - 황아인 16:22 (ts 1776756121): "ABB Tint Trio Holiday Edition 쇼핑백 제거 완료하였습니다" → R192 Complete였음
+    - 이동호 16:19 (ts 1776755992): "레드쿠션+워터리즘 틴트 30% 할인 세팅 건 — 이 부분 아인님 해당 쓰레드 답변으로 완료" → R143 Complete였음
+  - 원인: audit 중 thread_ts를 `1776733061.000000` 형태로 추측하여 `slack_read_thread` 호출 → `thread_not_found` 에러 반환 → "reply 없음"으로 오판정. 실제 thread_ts는 `1776733061.250129`. 사용자 permalink 공유 후 정확한 ts 확보
+  - 영향: 4/22 EOD 본문에서 R192 "⚠️ 1일 지연" / R143 "⚠️ 5일 지연"으로 오기. 시트 Status도 Not yet/Processing으로 유지됨
+  - 대응: (1) R192/R143 시트 Status Complete + Result ts 증거 반영 (2) 정정 thread reply 발송 ts 1776836044.283439 (3) CLAUDE.md RC12 강화: thread_ts 추측 금지 + Message_ts 직접 파싱 + ts 확보 경로 우선순위 명시 (4) SKILL.md RC12 동기화
+- 정정 발송 ts: 1776836044.283439 (4/22 EOD thread reply)
 
 ### 4/7 19:30 audit
 - 시작 시각: 2026-04-07 19:30 KST

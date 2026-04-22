@@ -211,11 +211,19 @@ Task 성격 → owner 매칭:
   - Due 변경 시 Result에 슬랙 ts 증거 기록 (예: "이동호 4/6 재설정: 4/14 ts 1775...")
 
 ### RC12 — 봇 메시지 thread reply 무시 (CRITICAL)
-- **증상**: EOD 봇 메시지 → 팀이 thread에 상태 업데이트 reply → 무시됨
+- **증상 (초회)**: EOD 봇 메시지 → 팀이 thread에 상태 업데이트 reply → 무시됨
+- **재발 (2026-04-22)**: 4/21 EOD 봇 thread(`ts 1776733061.250129`)에 4/21 16:16~16:22 reply 6개(황아인 R192 쇼핑백 제거 완료 / 이동호 R143 30% 할인 완료 등). 4/22 audit에서 thread_ts 추측(`.000000`/Unix 시간 변환)으로 `thread_not_found` 에러 → "reply 없음"으로 오판정 → R192/R143 ⚠️ 지연 오보고. 사용자 지적 후 정정
+- **원인**: thread_ts를 추측으로 구성(timestamp + decimal 임의 padding) → `thread_not_found` 에러를 "reply 없음"으로 잘못 해석
 - **방지**:
   - 매 audit 최근 봇 메시지 thread 전부 재독 (양 채널)
   - 검색: `from:U06AHN2ALJW` 최근 7일
   - 봇 메시지는 "send and forget" 아님 — 가장 유력한 status update 장소
+  - **thread_ts는 반드시 search/channel_read 결과의 `Message_ts` 값 그대로 사용**. Unix 시간 변환 금지. `thread_not_found` 에러 발생 시 "reply 없음"이 아닌 "ts 포맷 오류"로 간주 → 재조회
+  - **ts 확보 경로 우선순위**:
+    1. `slack_search_public_and_private` with `is:thread after:YYYY-MM-DD in:#channel` → `Message_ts` 필드 직접 파싱
+    2. `slack_read_channel` 페이지네이션 결과의 timestamp 필드
+    3. Slack permalink URL(`/pXXXXXXXXXXX`)에서 역산 (`XXX.XXX` 포맷 변환)
+  - **사용자가 "thread 놓쳤다"는 지적 시**: 즉시 원 thread_ts로 재독 + 누락 status 전수 반영 + 정정 thread reply 발송
 
 ### RC13 — 권한 요청 우회 처리 놓침
 - **증상**: "Shopify 메뉴 권한" 요청 → 실제론 이동호 계정으로 우회 처리됨 → task는 "Not yet"

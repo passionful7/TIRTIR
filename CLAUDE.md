@@ -403,13 +403,21 @@ Each time a mistake is found, log it here with root cause + prevention rule. Bef
 
 ### RC12: Bot message thread reply blindness (CRITICAL)
 **Symptom:** Sent EOD status update via 매도비 bot. Team members (이동호) replied in the thread with status updates ("BOGOS 테스트 완료", "Google MC 4/30로 재설정", "오늘 신규 가이드 작성 예정"). Did NOT re-read the bot message thread in the next audit cycle, so missed all 4 status updates.
-**Root cause:** Treated the bot message as "outbound only" — assumed no replies would come back since the bot author is myself. Failed to check threads on bot-authored parent messages.
+
+**Recurrence (2026-04-22 — CRITICAL REPEAT):** 4/21 EOD 봇 메시지 thread(`ts 1776733061.250129`)에 4/21 16:16~16:22 사이 6개 reply가 달림: 황아인 "ABB Tint Trio 쇼핑백 제거 완료하였습니다" (R192) + 이동호 "레드쿠션+워터리즘 틴트 30% 할인 해당 쓰레드 답변으로 완료" (R143). 4/22 audit에서 thread_ts 추측 시 `.000000`/`.xxx` 포맷 오류로 thread_not_found만 반환 → ts 포맷 확인 안 하고 "팀 reply 없음" 결론 → R192/R143 모두 ⚠️ 지연으로 오보고. 사용자 지적 후 정정 thread reply 발송.
+**Root cause:** Treated the bot message as "outbound only" — assumed no replies would come back since the bot author is myself. Failed to check threads on bot-authored parent messages. **Additional mechanism (2026-04-22): thread_ts를 추측(timestamp를 Unix time 변환 + 임의 decimal)으로 구성했더니 `thread_not_found` 에러. 그 에러를 "reply 없음"으로 오해하고 검증 종료. 정확한 thread_ts는 `slack_search_public_and_private` 또는 `slack_read_channel` 결과에서 직접 가져와야 함.**
 **Prevention:**
 - **Every audit cycle MUST re-read the most recent bot status update threads** in BOTH channels (`C0AMP96KZHB` and `C0ALWLLQFU7`).
 - Bot messages are not "send and forget" — team members reply with status updates, corrections, and new task info.
 - Search for `from:매도비` (bot user) or `from:U06AHN2ALJW` (bot user_id) in last 7 days, then `slack_read_thread` for each result.
 - The thread of your own status messages is the **most likely place** to find direct human responses to specific tasks you listed.
 - This rule supersedes RC3 — even self-authored threads must be re-read.
+- **thread_ts는 반드시 search/channel_read 결과의 `Message_ts` 값을 그대로 사용**. 절대 시간 변환으로 추측하지 말 것. `thread_not_found` 에러가 나면 "reply 없음"이 아니라 "ts 포맷 틀림"으로 간주 → `slack_search_public_and_private` query로 정확한 ts 재확보.
+- **ts 확보 경로 우선순위**:
+  1. `slack_search_public_and_private` with `is:thread after:YYYY-MM-DD in:#channel` → `Message_ts` 필드 직접 파싱
+  2. `slack_read_channel` 페이지네이션 결과의 timestamp 필드
+  3. 사용자가 공유한 슬랙 permalink URL(`/p<ts_without_dot>`)에서 역산 (`pXXXXX` 부분을 `XXXX.XXXX` 포맷으로 변환)
+- 사용자 지적 트리거 시 — "thread 놓쳤다" 지적이 오면 **즉시 원 thread_ts로 재독 + 누락된 status 전수 반영 + 정정 thread reply 발송** (사용자 대기 시간 최소화).
 
 ### RC13: "Permission request" tasks not checking for workarounds
 **Symptom:** Created task "Shopify 카테고리 메뉴 권한 추가 요청" (R116) when 황아인 reported lack of menu permission. But 이동호's account already had the permission, so 황아인 added the product immediately via 이동호's URL. The task became unnecessary, but stayed in "Not yet" because the workaround wasn't tracked.
