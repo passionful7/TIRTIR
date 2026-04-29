@@ -155,6 +155,11 @@ The cross-check process must not only **update existing tasks** but also **detec
 - Send time: Optimal Sending Time (AI)
 - Embedded forms: Shopify theme editor → Custom code section → `<div class="klaviyo-form-{ID}"></div>` + openForm script
 - Email dark mode: set explicit background colors on all blocks (Transparent → inverts to black in dark mode)
+- **SHOP NOW 버튼 (2026-04-28 황아인 ts 1777364820 신규 컨벤션)**: 4/28 이후 캠페인부터 SHOP NOW 버튼은 *이미지 형태*로 제작. 폰트는 12+Bold 우선 적용 (김소형 4/28 답변)
+- **레퍼런스 사진 저작권 (2026-04-23 자연님 ts 1776939672)**: 외부 레퍼런스 사진은 *참고용으로만* 활용. 그대로 사용 금지 (저작권 이슈)
+
+### UTM convention
+- **모든 캠페인 Tracking Template 유형 = `Final URL Suffix` 방식 (2026-04-22 이동호 ts 1776858473 통일 공지)**: Google Ads 기존 Tracking Template 방식이 Pmax 트래킹 이슈 발생 → Final URL Suffix로 전체 통일. Google Search / Display / YouTube / Pmax 모두 적용. 신규 캠페인 세팅 시 본 규칙 준수.
 
 ### Ad accounts
 - Meta Ad Account: `508479813992365`
