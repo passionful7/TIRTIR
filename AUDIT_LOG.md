@@ -53,6 +53,34 @@
 
 ## 진행 노트
 
+### 5/5 09:31 audit (sheet 미연동 모드)
+- 시작 시각: 2026-05-05 09:25 KST (화요일)
+- 종료 시각: 2026-05-05 09:32 KST
+- 트리거: 사용자 "run the TIRTIR audit skill to organize tasks for the TIRTIR campaign"
+- 주간 경계: today=5/5(Tue) → 이번주 5/4(월)~5/10(일), 다음주 5/11(월)~5/17(일)
+- 5/4 09:38 EOD 이후 약 24시간 격차
+- **⚠️ 제약사항: gws auth 만료** — `Token has been expired or revoked` 에러로 시트 read/write 모두 불가능. 이번 audit은 시트 업데이트 없이 진행. 사용자 측 `gws auth login` (브라우저 OAuth) 재인증 필요. 다음 audit 전 인증 복구 필수.
+- Slack scan 정상 수행:
+  - 고객사 채널 2페이지 (3/20~5/4) 전수 스캔 완료
+  - 내부 채널 4페이지 (3/18~5/4) 전수 스캔 완료
+  - 봇 메시지 5/4 09:38 EOD 발견 + thread 재독 (No replies)
+  - 5/4 10:49 이동호 "티르티르 상시 광고 운영 관련" thread (2 replies, 모두 self) 재독
+  - 5/4 18:26 client Retentics 서비스 공지 thread 재독 (No replies)
+- 신규 발견 (시트 미반영, 다음 audit 시 반영 필요):
+  - **NEW client (5/4 18:26)**: Retentics 서비스 사용 공지 (TIRTIR이 Klaviyo Flow → Retentics 이관, 매드업은 Campaign 영역 집중) ts 1777886795. R&R 분기 정리 필요
+  - **NEW client (5/4 11:39)**: 박서우 Meta AO 광고 제외 이유 문의 ts 1777862342. 홍유니 답변 대기
+  - **NEW (Complete) BDRN 광고 종료** (이동호 5/4 10:50 ts 1777859408 — 미팅 종료 합의됐으나 라이브 중 → 직접 종료)
+  - **운영 규칙 변경**: Klaviyo 발송 일정 시트 일원화 (이동호 5/4 ts 1777862813. 김소형 swap 인지 미스 제기 후 합의)
+  - **이슈**: Glow Gift 2차 Klaviyo 발송 swap 일정 어긋남 (실제 5/3 발송 / swap 규칙상 5/13 예정). 3차 5/25 → 일정 재정렬 필요
+- 5/4 P0 carry-over (5/5 today 점검 필요):
+  - Primer Launch Deal 종료 (광고 OFF 5/4 KST 15:00 / Shopify 롤백 5/4 KST 16:00) — 슬랙 별도 완료 보고 미확인
+  - Pore Blur Set US 핑크 픽서 Sold Out 노출 변경 — 슬랙 보고 미확인
+  - GLOW BASE SET 번들 오류 사후 처리 — 슬랙 보고 미확인
+  - Pixer 색상/가격 자연님 컨펌 — 4/29~5/4 미회신 (5일 경과)
+- RC 위반: 0건 (예방). RC21 grep CLEAN, RC18 주간 경계 명시.
+- 발송 ts: 1777941106.372639 (C0ALWLLQFU7 내부 채널, 확인 없이 자동 발송)
+- **TODO 다음 audit 시**: gws auth 복구 후 시트 적용 — (1) BDRN 종료 → R{XX} Complete (2) Retentics R&R 변경 신규 task 생성 (3) Klaviyo 발송 일정 시트 일원화 운영 규칙 반영 (4) Primer 종료/Pore Blur/GLOW BASE SET/Pixer 컨펌 결과 확인 후 Status 업데이트
+
 ### 4/22 audit
 - 시작 시각: 2026-04-22 10:40 KST (수요일)
 - 종료 시각: 2026-04-22 11:36 KST
