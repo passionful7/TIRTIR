@@ -155,6 +155,10 @@ The cross-check process must not only **update existing tasks** but also **detec
 - Send time: Optimal Sending Time (AI)
 - Embedded forms: Shopify theme editor → Custom code section → `<div class="klaviyo-form-{ID}"></div>` + openForm script
 - Email dark mode: set explicit background colors on all blocks (Transparent → inverts to black in dark mode)
+- **Klaviyo Flow R&R 분기 (2026-05-04 자연님 client 공지 ts 1777886795)**: TIRTIR이 **Retentics (AI SaaS)** 사용하여 Flow(1회 구매 → 재구매 유도, loyal 전환) 자동화. 매드업은 **Campaign 영역(뉴스레터 등) 집중**. 매드업 응답안 작성 진행 중 (~5/7)
+- **SHOP NOW 버튼 컨벤션 (2026-04-28 김현서 ts 1777364820)**: 4/28 이후 캠페인부터 SHOP NOW 버튼은 **이미지 형태**로 제작. 1차 적용 시 폰트 12 + Bold (김소형 우회안)
+- **레퍼런스 사진 저작권 정책 (2026-04-23 자연님 19:21)**: 외부 레퍼런스 사진(Pinterest 등) 그대로 사용 금지. 참고용으로만 활용
+- **발송 일정·문구 시트 일원화 (2026-05-04 이동호 ts 1777862813)**: Klaviyo 문구·일정 모두 [통합 시트](https://docs.google.com/spreadsheets/d/1FnrZWglAeb6S2wx-zIohS_kGoGYDe31v6Y4JOzaKWkM)에서 일원 관리. 변경 발생 시 시트 반영 필수 (Glow Gift 2차 발송 일정 swap 후 5/13 인지 / 5/3 실제 발송 어긋남 사후 합의)
 
 ### Ad accounts
 - Meta Ad Account: `508479813992365`
@@ -203,6 +207,53 @@ Promotion open/close times use **different timezones** for open vs close (per TI
 - Slack message status: `Complete` / `Processing` / `Not yet` / `Urgent`
 - Due dates: `26.03.30` (YY.MM.DD)
 - BB tasks: `[BB]` prefix
+- **AO 광고 = Always On (상시 광고)** (2026-04-30 홍유니 14:01 ts 1777525302) — 향후 모든 운영 보고 동일 의미
+
+## UTM tracking convention (updated 2026-04-22, 이동호 ts 1776858473)
+
+> **Final URL Suffix 방식으로 모든 매체 통일**. Pmax 트랙킹 이슈 대응으로 Tracking Template 방식 폐기.
+
+- Google Ads (Search/Display/YouTube/Pmax), Meta, TikTok 모두 **Final URL Suffix**에 UTM 파라미터 입력
+- 4/22 20:48 기준 Google 캠페인의 Tracking URL 일괄 제거 완료
+- Meta/TikTok UTM 적용은 홍유니 4/24 휴가 복귀 후 진행 예정
+- Confluence UTM 가이드(Page ID 4701454355) 동일하게 업데이트 완료
+- 이전 Tracking Template 방식 사용 캠페인 발견 시 즉시 Final URL Suffix로 전환
+
+## 소재 기획 → 시안 컨펌 7단계 표준 프로세스 (updated 2026-04-29, 홍유니 19:06 ts 1777457201)
+
+> 디자인 시안 컨펌은 **디자인팀 1회 sync로 종결**. 의사결정 번복/오브제 변경/요청 회수 지양.
+
+1. **티르티르 기획안** 전달 (TIRTIR)
+2. **매드업 소재/배너 기획** 작성 + 1차 컨펌 단계에서 **문구 마무리** (황아인)
+3. **티르티르 1차 컨펌** (자연님 / 박서우 / 김현서)
+4. **매드업 디자인 제작** (김소형)
+5. **티르티르 시안 컨펌** (자연 / 박서우 / 김현서)
+6. **매드업 디자인 수정 + 최종본** (김소형)
+7. **티르티르 시안 2차 컨펌** (디자인팀 1회 sync로 종결)
+
+- 시안 컨펌 단계에서 디테일업·디자인팀 싱크용 추가 수정만 허용
+- 의사결정 번복·오브제 변경·요청 회수는 **금지**
+- 1차 컨펌 단계에서 문구를 마무리하여 디자인 단계 진입 시 변경 최소화
+
+## 상시 광고 운영 cadence (updated 2026-05-06, 홍유니 08:47 ts 1778024861 + 이동호 5/4 의견)
+
+- **운영 주기**: 월 1회 (기존 "주 1회"는 운영 어려움으로 변경)
+- **메타 상시소재**: 5월말까지 **3개 이미지 에셋 제작** → 6월 이미지 에셋 교체 운영
+- **5월 운영**: 텍스트 에셋 변경 위주
+- **6월 운영**: 이미지 에셋 신규 교체
+- **BDRN 상시 광고**: 재정비 시 OFF 일괄 처리 (4/30 미팅 종료 합의 후 BDRN 라이브 잔류 발견 → 이동호 5/4 직접 종료)
+- **김소형이 구글/메타 상시소재 스케줄링 + 제작 요청 받음**, 5월말까지 제작 (기획은 차주 초까지)
+
+## 프로모션 스펙 양식 시트 사용 (updated 2026-04-23, 황아인 19:13 ts 1776939231)
+
+- **5/15 AI 샤셋 건부터 의무 적용**
+- TIRTIR이 [협업 시트](https://docs.google.com/spreadsheets/d/1FnrZWglAeb6S2wx-zIohS_kGoGYDe31v6Y4JOzaKWkM)의 스펙 양식 작성 후 노티 → 매드업 검토 → 진행
+- 양식 작성 없이 진행되는 프로모션 요청은 양식 작성을 먼저 요청
+
+## NL/UK GWP 가재고 운영 (프리오더 방식, updated 2026-04-30 박서우)
+
+- 메세지 카드 등 GWP 재고 미입고 시 **가재고 500개씩 등록** 후 입고 시 전산 반영
+- 재고 부족으로 라이브 지연 방지 — 1-2일 내 도착 가정한 프리오더
 
 ## Team & R&R (source of truth)
 

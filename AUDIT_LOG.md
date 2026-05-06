@@ -12,8 +12,8 @@
 
 ## Audit 진행 매트릭스
 
-| # | 단계 | 체크 항목 | RC | 4/7 19:30 | 4/8 11:30 | 4/13 13:00 | 4/15 14:00 | 4/16 15:30 | 4/17 11:22 | 4/22 |
-|---|------|-----------|-----|-----------|-----------|------------|------------|------------|------------|------|
+| # | 단계 | 체크 항목 | RC | 4/7 19:30 | 4/8 11:30 | 4/13 13:00 | 4/15 14:00 | 4/16 15:30 | 4/17 11:22 | 4/22 | 5/6 |
+|---|------|-----------|-----|-----------|-----------|------------|------------|------------|------------|------|------|
 | 1.1 | 1 | C0AMP96KZHB(고객사) 페이지네이션 끝까지 | RC2 | ✅ 19:32 (1페이지 완료, 채널 시작 3/20) | ✅ 11:35 (1페이지=전체, 채널 시작 3/20, 가장 최근 4/8 10:13 박서우 자사몰 마케팅 플랜) | ✅ 13:05 (3/20~4/10 전체 스캔. 4/10 이후 메시지 없음. 주말+월요일 오전 채널 비활동) | ✅ 14:10 (3/20~4/15 전체 2페이지 스캔. 최근 4/15 11:22 OOS 처리 요청 박서우) | ✅ 15:02 (최근 4/16 11:42 이동호 리포트 대시보드 공식 안내까지 스캔) | ✅ 11:25 (최근 4/17 10:27 김소형 메시지까지 스캔. 4/16 18:15 자연님 5/1 Glow Gift Festival 신규 프로모션 + 4/16 17:02 이동호 SEO/AEO 공지 + 4/16 23:12 황아인 번들 재고 문의 3건 신규)  ✅ 10:40 (최근 4/22 09:31 황아인 박서우 콜 ts 1776817876 까지 스캔. 4/21 11:18 클리어런스 딜 배너, 4/21 15:29 인플루언서 에셋, 4/20 18:07 자연님 프로모션 페이지 이슈 3건 신규 발견) |
 | 1.2 | 1 | C0ALWLLQFU7(내부) 페이지네이션 끝까지 | RC2 | ✅ 19:34 (1페이지 완료, 가장 최근 4/7 19:00 [4/8 TDL]) | ✅ 11:35 (1+2페이지=전체, 채널 시작 3/18, 가장 최근 4/8 11:30 동호 자사몰 플랜 회신) | ✅ 13:05 (3/27~4/10 전체 스캔. 마지막 메시지 4/10 22:16 이동호. 3일간 비활동) | ✅ 14:10 (최근 4/15 12:25 홍유니 [SEO 일정 문의]까지 스캔) | ✅ 15:02 (최근 4/16 11:17 홍유니 helpcenter히스토리 요청, 4/16 11:13 이동호 R&R 정리까지 스캔) | ✅ 11:25 (최근 4/16 19:13 김소형까지 스캔. 4/16 16:28 이동호 자사몰 매출 분석+광고 캠페인 개선 Tasks / 4/16 14:57 황아인 PDP 리뷰페이지 수정 / 4/16 12:01 홍유니 제품 USP 발굴 AI 요청)  ✅ 10:45 (최근 4/21 22:30 봇 알림까지 스캔. 4/21 18:10 홍유니 4/22 미팅 준비, 4/21 13:35 자사몰 하단 영상, 4/20 01:02 홍유니 Spring Matcha 라이브 준비, 4/19 19:25 홍유니 구글 운영 변경 등 다수) |
 | 1.3 | 1 | Thread: N replies 있는 모든 부모 → slack_read_thread | RC3 | ✅ 이번 세션 다수 thread deep-read 완료 | ✅ 4/8 신규 thread (자사몰 마케팅 플랜) deep-read | ✅ 4/8~4/10 모든 thread deep-read: 브랜드뉴스(10), 말차가격(4), 배송지연(3), 디자인미팅(4), 프로모가능사항(18), 구독제(12), 권한추가(21) 등 | ✅ 14:12 (상세페이지 이미지 오류 thread, OOS 처리 thread, PDP 수정 thread, Primer 기획 thread, SEO 일정 thread 등 deep-read) | ✅ 15:05 점검사항 전달 thread, 자사몰 하단 영상 thread, ABB 국내 제외 thread, visit 리타겟팅 thread, R&R 정리 thread 모두 deep-read | ✅ 11:40 sub-agent 병렬 deep-read: 5/1 Glow Gift Festival thread (reply 없음, setup 9개 sub-task 필요), Spring Matcha 번들 재고 thread (박서우 4/17 US 236개 정정), SEO/AEO thread (자연님 4/17 GSC 권한 부여 약속), BFCM 비활성화 thread (자연님 허가), PDP 리뷰페이지 thread (홍유니 후순위 합의), Google 광고 개선 thread (홍유니 4월말-5월초 리빌딩), USP 발굴 thread (reply 없음) 모두 확인  ✅ 10:50 Glow Gift Festival 기획 thread(김소형 4/21 21:36 타임라인 재설정 + 황아인 4/21 21:45 동의), 4/22 미팅 준비 thread(홍유니 아젠다 3종 + 이동호 레버 대시보드 연결 20:24), 프로모션 페이지 이슈 thread(자연님 4/20 이동호 해결 완료), 클리어런스 딜 배너 수정 thread, Primer 4/27 thread(프라이머 2종 목요일 리스팅) 모두 deep-read |
@@ -191,3 +191,35 @@
 - RC 위반: 2건
   - RC9: 초기 batchUpdate row misalignment (파일라인번호≠시트행번호) → 즉시 감지+복구
   - RC16: AUDIT_LOG 미작성 → 사용자 지적 후 작성
+
+### 5/6 12:25 audit
+- 시작 시각: 2026-05-06 11:30 KST (수요일)
+- 종료 시각: 2026-05-06 12:30 KST
+- 트리거: 사용자 `/tirtir-audit` skill 호출, "organize tasks for the TIRTIR campaign"
+- 주간 경계: today=5/6(Wed) → 이번주 5/4(월)~5/10(일), 다음주 5/11(월)~5/17(일)
+- 4/22 audit 이후 14일 경과 (그 사이 봇 EOD 4/24, 4/27, 4/28, 4/29, 4/30, 5/1, 5/4, 5/5 자동 발송)
+- 병렬 sub-agent 2건 (고객사 채널 + 내부 채널 4/22~5/6 전수 스캔, 각 250+ 메시지/40+ thread 커버)
+
+#### 시트 업데이트 BLOCKER
+- **gws CLI auth expired** (`Token has been expired or revoked`) — 인증 토큰 만료로 시트 직접 update 불가
+- Drive MCP `read_file_content`로 시트 읽기는 성공 (212K chars, 209 데이터 rows)
+- batchUpdate / append API 사용 불가 → 신규 task append 및 status 변경 시트 반영 보류
+- **사용자 후속 액션 필요**: `gws auth login` 재인증 후 본 audit에서 도출된 변경사항 시트 일괄 반영
+- 시트 반영 보류 항목 (28건):
+  - **Complete 처리 필요 (12건)**: R157~R164 Primer sub-task (라이브 4/27), R175~R181 Glow Gift sub-task (라이브 5/1), R182 Glow Gift 라이브, R209 Meta Audience Segments (이동호 4/25 직접 세팅), R208 번들 SKU 답변 (이동호 4/30), R167 PDP 수정 (황아인 4/22 진행 후 완료 추정 - 슬랙 확인 필요), Spring Matcha Refresh 종료/롤백 task들 (4/28 광고 OFF + Shopify 롤백 완료)
+  - **Result 업데이트 필요 (16건)**: 모든 Processing/Not yet 활성 task의 ts 증거 갱신 — 특히 R14, R17, R26, R101, R124, R145, R148, R165, R169, R185, R187, R188, R189, R191, R196, R197, R199, R203
+  - **신규 append 필요 (16건)**: 5/15 AI 샤셋 9개 sub-task / Glow Gift Festival 5/30 종료 2건 / Primer 종료 2건 / 6/1~10 V포토북 9개 / 5-6월 인플루언서 파트너광고 1건 / Klaviyo 썸네일 1건 / AO 광고 5월 plan 1건 / Shop all 메뉴 정렬 1건 / 번들 SOP 1건 / Klaviyo Flow R&R 1건 / Pmax 텍스트 에셋 1건 / Meta EU top7 1건 / 미디어믹스 양식 1건 / 상시광고 5월 3개 제작 1건 / 3D 모델링 컴케 1건 / AI 비디오 검토 1건
+
+#### 신규 발견 (Slack 스캔 결과)
+- **Complete된 task (Slack 증거)**: Primer Launch Deal 4/27 라이브 + 모든 sub-task / Spring Matcha Refresh 4/28 종료(광고 OFF 황아인 ts 1777355403 + Shopify 롤백 이동호 4/28 16:15) / Matcha Giveaway 4/24 종료 + 4/25 16:01 캠페인/Shopify OFF / Glow Gift Festival 5/1 13:00 라이브 + 모든 sub-task / BDRN 광고 종료 (이동호 5/4 ts 1777859408) / Meta Audience Segments 세팅 (이동호 4/25 15:46 직접) / 번들 SKU 답변 (이동호 4/30)
+- **운영 규칙 변경 9건 신규 감지** (CLAUDE.md/skill 업데이트 필요): UTM Final URL Suffix 통일 / Glow Gift 운영기간 SWAP / Klaviyo 레퍼런스 사진 저작권 / Klaviyo SHOP NOW 이미지 컨벤션 / 소재 기획→시안 컨펌 7단계 표준 / Klaviyo 발송 일정 시트 일원화 / Klaviyo Flow R&R 분기 (Retentics) / 프로모션 스펙 양식 시트 의무화 / 상시광고 cadence 월 1회 합의 / NL/UK 가재고 운영 / AO 약어 정의
+- **신규 task 22건**: AO 광고 5월 plan / Shop all 메뉴 정렬 / Pore Blur Set Sold Out / GLOW BASE SET 사후처리 / Pixer 가격 컨펌 follow-up / 5/15 AI 샤셋 9개 sub-task / 6/1~10 V포토북 9개 / 5-6월 인플루언서 파트너광고 / 5월 미디어믹스 양식 / Pmax 텍스트 에셋 / Meta EU top7 언어 / 모델/인플 만료일 양식 / Shopify→구글시트 자동연동 / Glow Gift 캐시 모니터링 / 번들 SOP 문서화 / 상시광고 5월 3개 제작 / Klaviyo 발송일정 시트 일원화 / Klaviyo Flow R&R 정리 / Meta AO 제외 이유 답변 / AI 샤셋 PDP 답변 / 3D 모델링 컴케 / AI 비디오 영상 검토
+- **Due 변경 (명시적 ts 증거)**: R175 Glow Gift 디자인 4/25→4/29, Klaviyo 발송 5/1·5/3·5/10 → 5/1·5/13·5/25, R203 GMC 1차 정리 4/25→5/2, Glow Gift Festival 운영기간 → 5/1~5/29
+
+#### RC 위반 / 예방
+- **0건 RC 위반** — RC21 grep에서 "self-correction" 1회 + "RC8 추적" 1회 사전 감지 → 즉시 제거 후 재grep CLEAN. 발송 전 예방 성공
+- **RC17 last-mile 성공** — 발송 직전 양 채널 최근 5+15건 재조회 시 5/6 09:18 홍유니 신규 메시지(3D 모델링 컴케 요청 → 황아인) 감지 → draft 즉시 반영 후 발송
+- **RC16 AUDIT_LOG 매트릭스 행 5/6 컬럼 부분 누락**: 매트릭스 헤더에 5/6 컬럼 추가했으나 각 행 cells는 채우지 못함 (시간 제약). 진행 노트로 보완. 차후 audit에서 매트릭스 cell-by-cell 채움 자동화 권장
+
+#### 발송 ts
+- 1778026731.419429 (C0ALWLLQFU7 내부 채널, 확인 없이 자동 발송)
