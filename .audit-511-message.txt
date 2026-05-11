@@ -1,0 +1,102 @@
+*[5/11 업무 현황 업데이트]* <!subteam^S0ANECM32QY>
+_5/8 09:19 EOD 이후 변경사항 종합 (주말 포함). 이번주 핵심 = AI Sachet 5/15 라이브 (D-4) + 자연님/박서우 5/8 client 요청 4건 today 마감 + 4월말 Tasks/5월 진행계획 client 공유._
+
+:bell: *Today 5/11(월) Client 요청 마감 (5/8 박서우 thread "차주 월요일" 약속)*
+• *GMC 배송 정책 변경 + Warehouse 4곳 정보* (<@U0AUAKVQKGR|박서우>) — 5/8 18:53 ts 1778234027 약속, 물류측 문의 결과 today 전달
+• *Summer Big Sale 기획안 슬라이드 3,4 딜페이지 기술 가능 여부 답변* (<@UCMKVTWP9|이동호>) — 박서우 5/8 19:07 ts 1778234837 기획안 + 시트 전달, 카테고리 구분 가능 여부 today 회신. 클라비요 기획안 + 인스타 추가 today 전달 예정 (박서우)
+• *AI Sachet — 1차 말차 라인 디자인 5/12 제작 / 5/14 16:00 수급* (<@U09FFQVH2FJ|김소형>) — 박서우 5/8 18:39 ts 1778233161 일정 요청 (단품 6종+번들 2종)
+• *메타 정산 VAT 포함여부 답변* (<@U02L20Z4MLP|홍유니>) — 5/8 18:39 ts 1778233153 "재무팀 확인 중" → today 회신 약속
+
+:red_circle: *P0 — AI Sachet 5/15 라이브 (D-4)*
+자연님 4/28 17:41 ts 1777365717 기획안 + Vicky 5/7 figma 1차 + 이동호 반영 완료. 디자인 5/12 제작 → 5/14 수급. 8개 sub-task 처리 필요.
+• *AI Sachet PDP 삽입 차안 진행 + Find My Shade 후속 (MMM 컨택 결과)* (<@UCMKVTWP9|이동호>) — 이동호 4/29 1차 답변(테마 미제공, MMM 다이렉트 컨택) → 박서우 5/4 11:34 차안 컨펌 → 5/7 11:46 이동호 MMM 회신 지연 안내. MMM 답변 받는 대로 차안 구현 + Find My Shade (자동 카트, 버튼색, 종료 후 유지, 1인당 3개 제한 등 5건) 적용
+• *AI Sachet — Shopify 세트/할인/페이지/배너* (<@UCMKVTWP9|이동호>, Due 5/13)
+• *AI Sachet — 1개 우선 리스팅 + 묶음 리스팅 검증* (<@U09PWQEJTMY|황아인>) — 5/4 황아인 5건 리스팅 완료 + 5/4 박서우 묶음 리스팅 가능 여부 추가 문의 → 황아인 확인 후 진행 답변. follow-up 필요
+• *AI Sachet — Klaviyo 1/2/3차 + 4차 쿠폰 발송 자동화* (<@UCMKVTWP9|이동호>, Due 5/14) — 4차 쿠폰 = 구매 1일 후 자동 메시지 발송 (김소형 5/8 박서우 컨펌 완료, ts 1778229227 thread)
+• *AI Sachet — Meta/Google 캠페인 세팅* (<@U02L20Z4MLP|홍유니>, Due 5/14)
+• *AI Sachet — 라이브 전 QA* (<@UCMKVTWP9|이동호>, Due 5/14)
+• *AI Sachet 라이브* (<@UCMKVTWP9|이동호> <@U02L20Z4MLP|홍유니>) — *5/15 EST 00:00 = KST 13:00* (4/14 swap 규칙)
+
+:bell: *4월말 Tasks 도출 + 5월 진행계획 client 공유* (<@UCMKVTWP9|이동호>, Due 4/30 :warning: *11일 지연*)
+자연님 4/27 17:15 명시 요청 ("수요일 공유"). 5/8 EOD 봇 D-day로 이미 표기, 미해결 — today 우선 처리
+
+:tada: *5/8 EOD 이후 변경사항 (주말 포함)*
+• *Spring Matcha Refresh 종료* (<@U09PWQEJTMY|황아인>, 4/28 16:17 ts 1777360635 *완료*) — 광고/딜배너 PC,MO/메인배너/가격 롤백/GWP/랜딩 redirect 모두 완료. Matcha Clean Duo 번들 비공개 처리 (박서우 컨펌)
+• *Matcha Giveaway 캠페인 종료* (<@UCMKVTWP9|이동호>, 4/25 16:01 *완료*)
+• *Lever Xpert 대시보드 client 공유* (<@UCMKVTWP9|이동호>, 5/7 13:01 ts 1778124092 *완료*) — leverdashboard.com/tirtir/dashboard, 비번 123456, 매일(주말 제외) 봇 메시지 자동 발송
+• *4월 매체 정산서 client 전달* (<@U02L20Z4MLP|홍유니>, 5/7 08:00 ts 1778108404 *완료*) — 대행수수료 정정 (12,476,035 → 8,979,786원)
+• *4월 매체 세금계산서 발행 진행* (<@U09PWQEJTMY|황아인>) — 5/7 결재상신 → 5/8 발행 진행. 김현서 4명 메일 수신, 발행일 4/30 확정
+• *베스트셀러 제품 변경 1차 적용 완료* (<@U09PWQEJTMY|황아인>, 5/7~5/8) — 글로우 프라이머 + 말차 크림 추가, 파운데이션/컨실러 제외. 썸네일 통일은 후순위 합의
+• *KR OOS 처리 3건 완료* (<@U09PWQEJTMY|황아인>, 5/7~8 thread 1778052080) — A1380A Spicule Shot Boosting Mask / A0665A Dermatir Intensive Lotion MD / A0142E My Glow Cream Cushion #17C Porcelain
+• *베스트셀러 셀러 변경* (<@U09PWQEJTMY|황아인>, 5/8 ts 1778224564 *완료*) — 글로우 프라이머/말차 크림 추가
+
+:bell: *신규 요청 — 프라이머 후속 번들 2종* (박서우 5/6 14:46 ts 1778029978)
+• *프라이머 후속 번들 2종 생성 + 검증* (<@UCMKVTWP9|이동호>, Due 5/9 :warning: *2일 지연*) — Glow Primer + Red Cushion / Pore Primer + Red Cushion. 진행가 .60 (20% 할인, 정가 ). 황아인 5/6 thread reply: "생성 + 테스트 진행한 뒤 공유드리겠습니다"
+• *번들 오세팅 재발 방지 프로세스 + 크로스체크 SOP 문서화* (<@U02L20Z4MLP|홍유니> <@UCMKVTWP9|이동호> <@U09PWQEJTMY|황아인>, Due 5/9 :warning: *2일 지연*) — Glow Base/Pore Blur (R207) + 분홍색/빨간색 픽서 (Glow Gift, 4건 미처리) 동일 이슈 재발 방지. 4/30 16:00 줌 미팅 후속
+
+:bell: *V포토북 6/1~10 이벤트 + 5/25 티징* (자연님 5/4 ts 1777538236)
+• *V포토북 이벤트 기술 가능 여부 검토* (<@UCMKVTWP9|이동호>, Due 5/11 today) — 김소형 권한 이슈, 자연님 추가 안내 필요. 9개 sub-task 분해는 가능 여부 확인 후. 박서우 5/7 16:53 기획안 수정 (베스트셀러 노출 제품과 버튼 2개→1개)
+
+:new: *5-6월 유튜브 인플루언서 파트너 광고 (4/28 홍유니→자연/사라)*
+• *유튜브 인플루언서 파트너 광고 운영* (<@U02L20Z4MLP|홍유니>, 5월 3주차~6월 2주차) — 4천만원 paid + 1천만원 섭외 = 총 5천만원. 5월 미디어믹스 +구글예산 4000만원 추가 (토탈 변동 X). 5월 운영 시 총 8.3천만원 (기초 6,339만원 + 인플 2,000만원)
+
+:new: *프로모션 종료/롤백 task 신규 (시트 미반영 — 추가 필요)*
+• *Primer Launch Deal 종료 — Shopify 롤백* (<@UCMKVTWP9|이동호>, Due *5/28 KST 16:00 / PST 5/28 00:00*) — 메인/딜배너 OFF, 할인코드 비활성, 페이지 hide. 이벤트 4/27~5/27
+• *Primer Launch Deal 종료 — Meta/Google 광고 OFF* (<@U02L20Z4MLP|홍유니>, Due *5/28 KST 15:00*, 종료 1시간 전 4/14 swap 규칙)
+• *Glow Gift Festival 종료 — Shopify 롤백* (<@UCMKVTWP9|이동호>, Due *5/30 KST 16:00 / PST 5/30 00:00*) — GWP 비활성, 메인/딜배너 OFF, 페이지 hide. 이벤트 5/1~5/29
+• *Glow Gift Festival 종료 — Meta/Google 광고 OFF* (<@U02L20Z4MLP|홍유니>, Due *5/30 KST 15:00*)
+
+:warning: *시트 업데이트 필요 — Primer 4/27 / Glow Gift 5/1 라이브 완료 sub-task*
+시트 기준 4/23 마지막 업데이트 이후 라이브 완료된 sub-task가 Processing/Not yet으로 남아있음. 슬랙 기준 모두 Complete:
+• *Primer Launch Deal 4/27 sub-task* (R158/R159/R160/R163, <@UCMKVTWP9|이동호>) → 4/27 KST 13:00 라이브 완료, Klaviyo 1차 4/27 + 2차 4/30 발송, 3차 5/11 발송 예정
+• *Glow Gift Festival 5/1 sub-task* (R176/R177/R178/R181, <@UCMKVTWP9|이동호>) → 5/1 KST 13:00 라이브 완료, Klaviyo 1차 5/1 + 2차 5/3 발송. 3차 5/13, 4차 5/25
+• *Meta Ads Audience Segments (R208)* (<@U06ND4MHK5W|하지현>) → 이동호 4/25 15:46 직접 세팅 완료 (engaged=store_visit_180d / existing=store_purchase_180d)
+• *Klaviyo 운영 내용 Notion 적재 (R165)* (<@UCMKVTWP9|이동호>) → 이동호 5/4 12:46 ts 1777862813 시트 일원화 결정으로 종결
+
+:large_orange_circle: *이번주 마감 (5/11(월)~5/17(일))*
+• *Klaviyo 뉴스레터 링크 공유 썸네일 모델 이미지 변경* (R205, <@U09FFQVH2FJ|김소형>, Due 5/11 today) — 자연님 4/23 13:45 ts 1776919551 5월 2주차까지
+• *Glow Gift Festival Klaviyo 3차 발송* (<@UCMKVTWP9|이동호>, 5/13) — 5/1~5/29 캠페인 (3차 last week 워딩)
+• *모델/인플루언서 만료일 양식 구축* (R193, <@U02L20Z4MLP|홍유니>, Due 5/15)
+• *Pixer 색상/가격 ($18.73→$22) 자연님 컨펌 follow-up* (<@U02L20Z4MLP|홍유니>) — 4/29 13:05 ts 1777435104 이후 *12일 무회신*. 자연님 직접 재확인 필요
+
+:date: *다음주 (5/18(월)~5/24(일)) — 인플루언서 광고 + Pmax 리빌딩 주간*
+• *인플루언서 2차활용권 광고 운영 시작* (R190, <@U02L20Z4MLP|홍유니>) — Rebecca Brewer #11 / khushhyyy #12. 5/6 사용가능 결론, beccaleebeauty 댓글 필터링 + 피부 색감 후처리 후 운영
+• *V포토북 5/25 티징* (<@U02L20Z4MLP|홍유니> <@UCMKVTWP9|이동호>) — 5/11 기술 가능 여부 답변 후 sub-task 분해
+• *Pmax 캠페인 구조/KPI 리빌딩* (R187, <@U02L20Z4MLP|홍유니>, Due 4/30 → 재설정 필요) — 1년 동일 소재 + 캠페인 통합 검토 진행 중. 이동호 5/7 메타 운영 점검 요청 통합
+• *Red Cushion 상시캠페인 스위칭 준비* (R188, <@U02L20Z4MLP|홍유니>, Due 5/30)
+• *Glow Gift Festival 종료 D-3* (<@UCMKVTWP9|이동호>) — 5/30 KST 16:00 종료 (Shopify 롤백) / 5/30 KST 15:00 광고 OFF
+
+:bell: *신규/확정된 운영 규칙*
+• *Klaviyo SHOP NOW 버튼 이미지 형태 적용* (4/28 이후 모든 campaign, 박서우 4/28 17:27 요청) — 김소형 5/2 답변: 한 줄 2개씩 가능, 3개 이상은 줄바꿈
+• *글로벌 쉐이드 할인 차별 주의* (5/1 박서우, CS 2건 발생) — 특정 쉐이드만 할인 시 인종차별 이슈 가능성. 쉐이드 옵션 작업 시 할인 적용 범위 + 실제 반영 여부 면밀히 체크
+• *프로모션 라이브 시간 communication 사전 확인* (4/27 박서우) — 라이브 시간 늦어지면 미리 공유, "수정 후 라이브" 방향으로 진행, 가격 시트 자동 반영 계획
+• *광고 소재 디자인 가이드* (4/30 박서우) — 미래지향적 배경 지양 / AI 사용 최소화 / 그라데이션 지양 / "her" → "their/loved ones" 성별 미특정
+• *AO 광고 신규 소재 제작 cadence* (5/7 홍유니) — 텍스트 우선 순차 교체, 이미지 6월 교체 (월 1회 → 박서우 2주 주기 요청 → 홍유니 최대 2주 목표 + 프로모션 변수 시 조율)
+
+:warning: *주요 지연 태스크 (Due 임의 변경 금지)*
+• *광고 계약서 서명* (Both, Due 3/27) :warning: *45일 지연* — 모두싸인 전자서명 진행 / TIRTIR 액션 대기
+• *BB 에이전시 접근권한 제거 (R38)* (<@U02L20Z4MLP|홍유니>, Due 4/1) :warning: *40일 지연* — BB 자료 5건 4/8 수령으로 unblock, 미실행
+• *불필요 앱 정리 TIRTIR 협의 (R55)* (<@UCMKVTWP9|이동호>, Due 4/7) :warning: *34일 지연*
+• *Shopify/Klaviyo 가이드 업데이트 + 체크리스트 (R122)* (<@UCMKVTWP9|이동호>, Due 4/8) :warning: *33일 지연*
+• *말차 랜딩 종료 정책 (R123) + 종료 안내 페이지 + redirect 일괄 (R145)* (<@UCMKVTWP9|이동호>, Due 4/9~4/14) :warning: *27~32일 지연* — Glow Gift 5/29 종료 적용 데드라인 = 5/30 KST 15:00
+• *TIRTIR 자사몰 4-6월 마케팅 플랜 회신 (R133)* (<@UCMKVTWP9|이동호> <@U09PWQEJTMY|황아인>, Due 4/9) :warning: *32일 지연* — 4/8 14:37 황아인 1차 회신 후 매드업 제안 미공유
+• *쿠션×틴트 옵션형 번들 검토 (R146)* (<@UCMKVTWP9|이동호>, Due 4/10) :warning: *31일 지연*
+• *프로모션 라이브 시간 Alert 프로세스 구축 (R92)* (<@UCMKVTWP9|이동호>, Due 4/13) :warning: *28일 지연*
+• *GTM 컨테이너 확인 + 도입 검토 (R41) / Klaviyo Click Rate 개선 (R43)* (<@UCMKVTWP9|이동호> <@U09PWQEJTMY|황아인>, Due 4/15) :warning: *26일 지연*
+• *4/9 VC follow-up 2건 (R152/R154)* — Shopify MYOB/GWP, Klaviyo 장바구니 자동화 (<@UCMKVTWP9|이동호>, Due 4/20) :warning: *21일 지연*
+• *쇼피파이 카테고리 구조 개편 (R148)* (<@U09PWQEJTMY|황아인>, Due 4/19) :warning: *22일 지연*
+• *자사몰 하단 영상 섹션 (R185)* (<@UCMKVTWP9|이동호>, Due 4/19) :warning: *22일 지연* — 이동호 4/23 16:31 적용 예정 답변 후 미보고
+• *쇼피파이 데이터 보고서 지표 개선 (R169)* (<@U09PWQEJTMY|황아인>, Due 4/18) :warning: *23일 지연*
+• *상시캠페인 개선 분석/실행 (R101)* (<@U02L20Z4MLP|홍유니> <@U09PWQEJTMY|황아인>, Due 4/24) :warning: *17일 지연*
+• *카탈로그 피드 (R17) / Google MC 피드 오류 (R42) / SEO 가이드 (R14) / SEO·AEO 적용 (R98)* (<@UCMKVTWP9|이동호>, Due 4/30) :warning: *11일 지연* — 5월 본격 진행 합의
+• *Google 광고 캠페인 구조/KPI 리빌딩 (R187)* (<@U02L20Z4MLP|홍유니>, Due 4/30) :warning: *11일 지연* — 메타 통합 검토 + 5/7 이동호 메타 운영 점검 요청 통합
+• *5월 미디어믹스 시트 양식 업데이트* (<@U09PWQEJTMY|황아인>, Due 5/4) :warning: *7일 지연*
+• *Meta EU top7 언어 테스트 세팅 / Pmax 추가 텍스트 에셋 (9-6 프라이머)* (<@U09PWQEJTMY|황아인> <@U09FFQVH2FJ|김소형>, Due 5/2) :warning: *9일 지연*
+• *Shopify→구글시트 자동 연동 개발* (<@UCMKVTWP9|이동호>, Due 5/2) :warning: *9일 지연* — 권한 close 처리 시 가능
+• *AO 광고 5월 개선안 client 전달* (<@U02L20Z4MLP|홍유니>, Due 5/7) :warning: *4일 지연* — 자연님 4/30 11:12 요청
+• *Klaviyo Flow vs Madup Campaign R&R 응답안* (<@UCMKVTWP9|이동호> <@U02L20Z4MLP|홍유니>, Due 5/7) :warning: *4일 지연* — Retentics 도입 관련
+• *Shop all/Make up/Skin care 메뉴 정렬* (<@UCMKVTWP9|이동호>, Due 5/13 차차주 수요일) — 박서우 4/30 09:50 요청, 이동호 안 합의 (썸네일 변경은 GMC 최적화 후 5/13)
+• *5/15 AI 샤셰 프로모션 스펙 양식 (R206)* (<@U0AUAKVQKGR|박서우>, Due 4/28) :warning: *13일 지연* — TIRTIR 측 작성 대기, 박서우 4/24 "재고 이슈 지연" 답변 후 미공유
+
+:clipboard: 업무 현황에 수정/추가 사항이 있으시면 이 스레드에 코멘트 남겨주세요.
+업무시트: <https://docs.google.com/spreadsheets/d/1BLQfFg7TZaRuw6CYwe6rjGgyqThkrbjzbWRYiiyhIe4/edit>
